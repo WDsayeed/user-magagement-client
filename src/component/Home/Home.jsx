@@ -7,7 +7,7 @@ const Home = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/users")
+    fetch("https://users-management-server-six.vercel.app/users")
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
@@ -25,7 +25,7 @@ const Home = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/usersDelete/${id}`, {
+        fetch(`https://users-management-server-six.vercel.app/usersDelete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

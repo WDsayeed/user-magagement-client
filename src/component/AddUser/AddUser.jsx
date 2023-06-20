@@ -12,7 +12,7 @@ const AddUser = () => {
 
                 const users = { name, email, phone}
 
-                fetch('http://localhost:5000/users',{
+                fetch('https://users-management-server-six.vercel.app/users',{
                         method:'POST',
                         headers:{
                                 'content-type': 'application/json'
